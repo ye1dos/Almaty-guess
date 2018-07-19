@@ -1,0 +1,213 @@
+
+
+html, body {
+  width: 100%;
+  height: 100%;
+}
+
+#content {
+  width: 100%;
+  height: 100%;
+}
+
+#miniMap {
+  width: 300px;
+  height: 300px;
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  z-index: 1000;
+  box-shadow: 0px 0px 20px rgba(255, 255, 255, 0.9);
+}
+
+#timer {
+  font-size: 50px;
+  line-height: 80px;
+  text-align: center;
+  width: 100px;
+  height: 80px;
+  background: lighten($tosca,40%);
+  border-radius:50%;
+  position: absolute;
+  top: 0px;
+  right: 683px;
+  z-index: 2000;
+  box-shadow: 0px 0px 20px rgba(255, 255, 255, 0.9); 
+}
+
+#guessButton {
+  font-size: 24px;
+  font-weight: bold;
+  color: white;
+  width: 260px;
+  cursor: pointer;
+  text-align: center;
+  position: absolute;
+  top: 340px;
+  right: 20px;
+  z-index: 1000;
+}
+
+#guessButton:hover {
+  background: #FF6666;
+}
+
+#pano {
+  width: 100%;
+  height: 100%;
+  z-index: 999;
+}
+
+#scoreBoard {
+  position: absolute;
+  bottom: 45px;
+  left: 20px;
+  width: 200px;
+  height: 80px;
+  padding: 10px;
+  background: white;
+  box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.9);
+  z-index: 1000;
+}
+
+#scoreBoard .round {}
+
+#scoreboard .totalScore {}
+
+
+/********************************
+	Round specific
+*********************************/
+
+#roundEnd {
+  position: absolute;
+  left: 50%;
+  width: 400px;
+  margin: 40px 0 0 -200px;
+  padding: 20px;
+  background: white;
+  text-align: center;
+  display: none;
+  z-index: 1005;
+  box-shadow: 0px 0px 20px rgba(255, 255, 255, 0.9);
+}
+
+#roundEnd #roundMap {
+  
+  width: 345px;
+  height: 200px;
+  background: red;
+  margin: 20px 0;
+}
+
+#roundEnd .closeBtn {
+  cursor: pointer;
+}
+
+#roundMap {
+  width: 300px;
+  height: 300px;
+  position: relative;
+}
+
+#endGame {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 400px;
+  margin: -190px 0 0 -240px;
+  padding: 20px;
+  background: #EFEFEF;
+  text-align: center;
+  display: none;
+  z-index: 1000;
+}
+
+* {box-sizing: border-box;}
+body {background: #f69a73;}
+.decor {
+  position: relative;
+  max-width: 400px;
+  margin: 50px auto 0;
+  background: white;
+  border-radius: 30px;
+}
+
+.form-left-decoration,
+.form-right-decoration {
+  content: "";
+  position: absolute;
+  width: 50px;
+  height: 20px;
+  background: #f69a73;
+  border-radius: 20px;
+}
+.form-left-decoration {
+  bottom: 60px;
+  left: -30px;
+}
+.form-right-decoration {
+  top: 60px;
+  right: -30px;
+}
+.form-left-decoration:before,
+.form-left-decoration:after,
+.form-right-decoration:before,
+.form-right-decoration:after {
+  content: "";
+  position: absolute;
+  width: 50px;
+  height: 20px;
+  border-radius: 30px;
+  background: white;
+}
+.form-left-decoration:before {top: -20px;}
+.form-left-decoration:after {
+  top: 20px;
+  left: 10px;
+}
+.form-right-decoration:before {
+  top: -20px;
+  right: 0;
+}
+.form-right-decoration:after {
+  top: 20px;
+  right: 10px;
+}
+.circle {
+  position: absolute;
+  bottom: 80px;
+  left: -55px;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background: white;
+}
+.form-inner {padding: 50px;}
+.form-inner input,
+.form-inner textarea {
+  display: block;
+  width: 100%;
+  padding: 0 20px;
+  margin-bottom: 10px;
+  background: #E9EFF6;
+  line-height: 40px;
+  border-width: 0;
+  border-radius: 20px;
+  font-family: 'Roboto', sans-serif;
+}
+.form-inner input[type="submit"] {
+  margin-top: 30px;
+  background: #f69a73;
+  border-bottom: 4px solid #d87d56;
+  color: white;
+  font-size: 14px;
+}
+.form-inner textarea {resize: none;}
+.form-inner h3 {
+  margin-top: 0;
+  font-family: 'Roboto', sans-serif;
+  font-weight: 500;
+  font-size: 24px;
+  color: #707981;
+}

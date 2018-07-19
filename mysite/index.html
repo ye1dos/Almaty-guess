@@ -1,0 +1,59 @@
+<?php include('server.php'); ?>
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset='utf-8'>
+  <title>Угадай место</title> 
+  <link rel='stylesheet' href='css/bootstrap.css' />
+  <link rel='stylesheet' href='css/style.css' />
+  <script type='text/javascript' src='https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js'></script>
+  <script type='text/javascript' src='https://maps.googleapis.com/maps/api/js?key=AIzaSyCZOXlIZdfYBcn_W8UrY-JYrE3eueQq4_k&sensor=false&libraries=geometry'></script>
+  <script type='text/javascript' src='js/rnd.js'></script>
+  <script type='text/javascript' src='js/minimap.js'></script>
+  <script type='text/javascript' src='js/streetviewmap.js'></script>
+  <script type='text/javascript' src='js/roundmap.js'></script>
+  <script type='text/javascript' src='js/app.js'></script>
+  
+</head>
+<body>
+  <div id='content'>
+    <div id="roundEnd"></div>
+    <div id="endGame"></div>
+    <div id='scoreBoard'>
+      <span class='round'>Текущий раунд: <b>1/5</b></span><br/>
+      <span class='roundScore'>Последний раунд: <b>0</b></span><br/>
+      <span class='totalScore'>Общий счет: <b>0</b></span>
+    </div>
+    <div id='miniMap'></div>
+    <div id='timer'></div>
+    <div id='guessButton' class="btn btn-large btn-danger">Сделать свой выбор</div>
+    <div id='pano'></div>
+  </div>
+  <form id="server" class="decor" action="server.php" method="POST">
+  <div class="form-left-decoration"></div>
+  <div class="form-right-decoration"></div>
+  <div class="circle"></div>
+  <div class="form-inner">
+    <table>
+      <tr>
+        <td>Имя: <input id="serverName" type="text" name="First_name" placeholder="Enter your name"></td>
+      </tr>
+      <tr>
+        <td>Фамилия: <input id="serverSurname" type="text" name="Last_name" placeholder="Enter your surname"></td>
+      </tr>
+      <tr>
+        <td>Email: <input id="serverEmail" type="email" name="mail" placeholder="Enter your email"></td>
+      </tr>
+      <tr>
+        <td>Номер: <input id="serverPhone" type="tel" maxlength="20" name="tel" placeholder="Enter your telephone number"></td>
+      </tr>
+      <tr>
+        <td><input id="serverButton" type="submit" name="submit" value="Submit"></td>
+      </tr>
+      <tr>
+        <td></td>
+      </tr>
+    </table>
+  </form>
+</body>
+</html>
